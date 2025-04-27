@@ -239,5 +239,11 @@ const WeaponsItems = {
         size: [6, 3], 
         image: "icons/items/weapons/launchers/M79.webp",
         category: "weapons"
+    },
+    "dmr": { 
+        name: "DMR", 
+        size: [9, 3], 
+        image: "icons/items/weapons/marksman_rifles/M14.webp",
+        category: "weapons"
     }
 };
