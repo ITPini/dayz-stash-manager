@@ -237,7 +237,7 @@ const WeaponsItems = {
     "m79": { 
         name: "M79", 
         size: [6, 3], 
-        image: "icons/items/weapons/handguns/M79.webp",
+        image: "icons/items/weapons/launchers/M79.webp",
         category: "weapons"
     }
 };
