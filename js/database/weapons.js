@@ -264,4 +264,28 @@ const WeaponsItems = {
         image: "icons/items/weapons/semi-automatic_rifles/SVD_w._PSO-1.webp",
         category: "weapons"
     },
+    "bizon": { 
+        name: "Bizon", 
+        size: [6, 3], 
+        image: "icons/items/weapons/submachine_guns/PP19.webp",
+        category: "weapons"
+    },
+    "cr-61_skorpion": { 
+        name: "CR-61 Skorpion", 
+        size: [4, 3], 
+        image: "icons/items/weapons/submachine_guns/CZ61.webp",
+        category: "weapons"
+    },
+    "sg5-k": { 
+        name: "SG5-K", 
+        size: [5, 3], 
+        image: "icons/items/weapons/submachine_guns/MP5K.webp",
+        category: "weapons"
+    },
+    "usg-45": { 
+        name: "USG-45", 
+        size: [6, 3], 
+        image: "icons/items/weapons/submachine_guns/UMP45.webp",
+        category: "weapons"
+    },
 };
