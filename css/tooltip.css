@@ -1,0 +1,27 @@
+/* Marker Tooltip */
+.marker-tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 1100;
+    transform: translate(-50%, -100%);
+    margin-top: -10px;
+}
+
+.marker-tooltip:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgba(0, 0, 0, 0.7);
+    transform: translateX(-50%);
+}

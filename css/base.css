@@ -1,0 +1,26 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.map {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+}
+
+/* Custom OpenLayers Overrides */
+.ol-attribution {
+    display: none;
+}
