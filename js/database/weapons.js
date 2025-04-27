@@ -245,5 +245,23 @@ const WeaponsItems = {
         size: [9, 3], 
         image: "icons/items/weapons/marksman_rifles/M14.webp",
         category: "weapons"
-    }
+    },
+    "sk_59/66": { 
+        name: "SK 59/66", 
+        size: [9, 3], 
+        image: "icons/items/weapons/semi-automatic_rifles/SKS.webp",
+        category: "weapons"
+    },
+    "sporter_22": { 
+        name: "Sporter 22", 
+        size: [6, 3], 
+        image: "icons/items/weapons/semi-automatic_rifles/Ruger1022.webp",
+        category: "weapons"
+    },
+    "vsd": { 
+        name: "VSD", 
+        size: [10, 3], 
+        image: "icons/items/weapons/semi-automatic_rifles/SVD_w._PSO-1.webp",
+        category: "weapons"
+    },
 };
