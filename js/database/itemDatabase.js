@@ -14,7 +14,8 @@ const ItemDatabase = {
             ...WeaponsItems,
             ...AmmunitionItems,
             ...ContainerItems,
-            ...MagazineItems
+            ...MagazineItems,
+            ...EquipmentItems,
             // Add other category imports as needed
         };
     },
