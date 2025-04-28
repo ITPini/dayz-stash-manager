@@ -13,7 +13,8 @@ const ItemDatabase = {
             ...DrinksItems,
             ...WeaponsItems,
             ...AmmunitionItems,
-            ...ContainerItems
+            ...ContainerItems,
+            ...MagazineItems
             // Add other category imports as needed
         };
     },
