@@ -288,4 +288,10 @@ const WeaponsItems = {
         image: "icons/items/weapons/submachine_guns/UMP45.webp",
         category: "weapons"
     },
+    "plastic_explosive": {
+        name: "Plastic Explosive", 
+        size: [3, 2], 
+        image: "icons/items/weapons/explosives/Plastic_Explosive.webp",
+        category: "weapons"
+    },
 };
