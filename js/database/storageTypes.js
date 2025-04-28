@@ -22,7 +22,7 @@ const StorageTypes = {
             anchor: [0.5, 0.5]
         },
         inventorySize: {
-            width: 6,
+            width: 9,
             height: 7
         }
     },
