@@ -1,0 +1,121 @@
+/* Inventory Grid */
+.popup-inventory {
+    margin-top: 15px;
+    overflow: auto; /* Allow scrolling */
+    max-height: 75vh; /* Limit height for large inventories */
+}
+
+.inventory-grid {
+    display: grid;
+    /* Grid template now set by JavaScript */
+    gap: 2px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 4px;
+    border-radius: 3px;
+    position: relative; /* Added for absolute positioning of overlays */
+    overflow: auto; /* Changed to auto for scrolling */
+    max-height: 70vh; /* Limit height for very large inventories */
+    box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+}
+
+.inventory-slot {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box; /* Ensure consistent sizing */
+}
+
+.inventory-slot:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.inventory-slot.can-place-here {
+    background-color: rgba(100, 255, 100, 0.25);
+    border: 1px solid rgba(100, 255, 100, 0.5);
+    animation: pulse-green 1.5s infinite;
+}
+
+.inventory-slot.cannot-place-here {
+    background-color: rgba(255, 100, 100, 0.25);
+    border: 1px solid rgba(255, 100, 100, 0.5);
+    animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(100, 255, 100, 0.4); }
+    70% { box-shadow: 0 0 0 4px rgba(100, 255, 100, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(100, 255, 100, 0); }
+}
+
+@keyframes pulse-red {
+    0% { box-shadow: 0 0 0 0 rgba(255, 100, 100, 0.4); }
+    70% { box-shadow: 0 0 0 4px rgba(255, 100, 100, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 100, 100, 0); }
+}
+
+.inventory-slot.has-item {
+    /* Keep subtle indication that slot is occupied */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.inventory-slot.item-start {
+    /* Keep subtle indication of item start position */
+    z-index: 1;
+}
+
+/* Item overlay styling */
+.item-overlay {
+    position: absolute;
+    cursor: grab;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    z-index: 5;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    user-select: none;
+    border-radius: 2px;
+    pointer-events: auto;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    margin: 5px;
+}
+
+.item-overlay:hover {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    filter: brightness(1.1);
+    z-index: 6;
+}
+
+.item-overlay:active {
+    cursor: grabbing;
+    transform: scale(1.02);
+}
+
+/* Stack count indicator */
+.stack-count {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 10px;
+    min-width: 14px;
+    height: 14px;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2px;
+    font-weight: bold;
+    pointer-events: none;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}

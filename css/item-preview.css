@@ -1,0 +1,59 @@
+/* Item Preview and Rotation */
+.item-preview {
+    position: fixed;
+    pointer-events: none;
+    z-index: 2000;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 2px dashed white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    text-shadow: 0 0 2px black;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transition: transform 0.2s ease;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform-origin: center center;
+}
+
+/* Rotation for item preview - Note: We're now handling rotation in JavaScript */
+.item-preview.rotated-item {
+    transform-origin: center center;
+    transform: rotate(90deg);
+}
+
+.rotate-btn {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.rotate-instruction {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    color: white;
+    text-shadow: 0 0 3px black;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 5px;
+    border-radius: 3px;
+}

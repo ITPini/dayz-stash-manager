@@ -1,0 +1,114 @@
+/* Item Selector Panel */
+.item-selector {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.85);
+    border-radius: 4px;
+    padding: 10px;
+    width: 500px;
+    max-height: 500px;
+    overflow-y: auto;
+    z-index: 1300;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.item-selector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 5px;
+}
+
+.item-selector-header h3 {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+.item-selector-header button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.item-categories {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.category-button {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    border-radius: 3px;
+    padding: 3px 8px;
+    font-size: 11px;
+    color: white;
+    cursor: pointer;
+}
+
+.category-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.category-button.active {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.items-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+.item-option {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.item-option:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.item-option-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+    text-shadow: 0 0 2px black;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-option-name {
+    font-size: 10px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.item-option-size {
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.6);
+}
